@@ -15,6 +15,7 @@ public class TradingSystem {
             activatePowerPegMode(); 
         }
     }
+		// Đây là comment vô nghĩa 
     private static void activatePowerPegMode() {
         int orders = 0;
         while (true) {
