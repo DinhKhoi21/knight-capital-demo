@@ -17,12 +17,12 @@ with:
 # LỚP BẢO VỆ 1: QUÉT NHANH
       	# Mục tiêu: Phát hiện ngay lập tức các từ khóa "nguy hiểm" đã biết
 -name: Layer 1 - Custom Script Scan (Fast Fail)
-run: 
+run: |
     echo "🔍 Đang quét từ khóa nhạy cảm..."
     if grep -r "activatePowerPegMode" src/main/java; then
     echo "❌ CẢNH BÁO: Phát hiện hàm Power Peg cũ! Dừng Pipeline ngay lập tức."
-	exit 1
-    fi
+exit 1
+fi
 # LỚP BẢO VỆ 2: PHÂN TÍCH SÂU
       	# Mục tiêu: Phát hiện mã nguồn chết, nợ kỹ thuật và lỗi logic ngay cả khi Dev đổi tên hàm.
 -name: Layer 2 - SonarCloud Analysis (Deep Scan)
