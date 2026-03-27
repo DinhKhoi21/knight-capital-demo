@@ -30,7 +30,7 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=DinhKhoi21_knight-capital-demo
+      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=12345111
       	# BƯỚC CUỐI: ĐÓNG GÓI (Chỉ chạy nếu 2 lớp trên đã PASS)
     - name: 3. Đóng gói sản phẩm (Build Artifact)
       run: mvn -B package --file pom.xml
